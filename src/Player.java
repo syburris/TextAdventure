@@ -12,7 +12,7 @@ public class Player {
     void chooseName(){
         System.out.println("What is your name?");
         name = Game.customLine();
-        System.out.println("Welcome, "+name);
+        System.out.printf("Welcome, %s\n", name);
     }
 
     void chooseWeapon() {
@@ -38,7 +38,7 @@ public class Player {
         if (location.equalsIgnoreCase("tunnel")){
             System.out.println("Entering tunnel...");
         }
-        else if (location.equalsIgnoreCase("forest")){
+        else if (location.equalsIgnoreCase("forest")) {
             System.out.println("Entering forest...");
         }
         else {
@@ -47,12 +47,12 @@ public class Player {
         }
     }
 
-    void findItem(String item){
-        System.out.println("You found a " + item + "! Press y to pick up.");
+    void findItem(String item) {
+        System.out.printf("You found a %s! Press y to pick up.\n", item);
         String answer = Game.customLine();
-        if(answer.equalsIgnoreCase("y")){
+        if(answer.equalsIgnoreCase("y")) {
             items.add(item);
-            System.out.println("You picked up " + item + "!");
+            System.out.printf("You picked up %s !", item);
         }
 
     }
