@@ -3,11 +3,15 @@ import java.util.*;
 /**
  * Created by stevenburris on 9/14/16.
  */
-public class Player {
-    String name;
+public class Player extends Character {
     String weapon;
     String location;
     ArrayList<String> items = new ArrayList<>();
+
+    Player() {
+        this.health = 20;
+        this.damage = 20;
+    }
 
     void chooseName(){
         System.out.println("What is your name?");
@@ -52,7 +56,7 @@ public class Player {
         String answer = Game.customLine();
         if(answer.equalsIgnoreCase("y")) {
             items.add(item);
-            System.out.printf("You picked up %s !", item);
+            System.out.printf("You picked up %s!\n", item);
         }
 
     }
