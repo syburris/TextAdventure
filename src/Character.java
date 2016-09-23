@@ -7,7 +7,7 @@ public class Character {
     int damage;
 
     public void battle(Character enemy) {
-        System.out.printf("A wild %s appears!\n", enemy.name);
+        System.out.printf("A crazy beast of an %s appears!\n", enemy.name);
 
         while (this.health > 0 && enemy.health >0) {
             this.health -= enemy.damage;
